@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindWindowsStoreService", "NorthwindWindowsStoreService\NorthwindWindowsStoreService.csproj", "{13CFCC41-83BD-4392-981C-287F578678C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindWindowsStore.DAL", "NorthwindWindowsStore.DAL\NorthwindWindowsStore.DAL.csproj", "{DBA6ED07-25B8-4809-BE14-5C710BFE320E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindWindowsStore.DAL.Model", "NorthwindWindowsStore.DAL.Model\NorthwindWindowsStore.DAL.Model.csproj", "{41546F16-5D08-4AAA-9685-3A429EA068CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindWindowsStore.Service", "NorthwindWindowsStore.Service\NorthwindWindowsStore.Service.csproj", "{1A366164-76C4-4EF8-986B-B9369C288DED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindWindowsStore.ViewModel", "NorthwindWindowsStore.ViewModel\NorthwindWindowsStore.ViewModel.csproj", "{AD04DD2F-E5F2-4755-9F44-8FAFC5FDD188}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13CFCC41-83BD-4392-981C-287F578678C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13CFCC41-83BD-4392-981C-287F578678C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13CFCC41-83BD-4392-981C-287F578678C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13CFCC41-83BD-4392-981C-287F578678C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBA6ED07-25B8-4809-BE14-5C710BFE320E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBA6ED07-25B8-4809-BE14-5C710BFE320E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBA6ED07-25B8-4809-BE14-5C710BFE320E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBA6ED07-25B8-4809-BE14-5C710BFE320E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41546F16-5D08-4AAA-9685-3A429EA068CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41546F16-5D08-4AAA-9685-3A429EA068CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41546F16-5D08-4AAA-9685-3A429EA068CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41546F16-5D08-4AAA-9685-3A429EA068CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A366164-76C4-4EF8-986B-B9369C288DED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A366164-76C4-4EF8-986B-B9369C288DED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A366164-76C4-4EF8-986B-B9369C288DED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A366164-76C4-4EF8-986B-B9369C288DED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD04DD2F-E5F2-4755-9F44-8FAFC5FDD188}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD04DD2F-E5F2-4755-9F44-8FAFC5FDD188}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD04DD2F-E5F2-4755-9F44-8FAFC5FDD188}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD04DD2F-E5F2-4755-9F44-8FAFC5FDD188}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
