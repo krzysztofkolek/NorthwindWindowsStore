@@ -28,7 +28,7 @@ A simple **Windows Store App** project based on the **.Net** platform.  It' s me
 ------------------------------
 The planning includes several steps of research. the main
 
- - **Databse** - the database *Northwind* database was selected.
+ - **Databse** - the *Northwind* database was selected.
 
  - **ORM** - *Dapper* was selected, because of its high performance and the simplicity it provides. 
 
