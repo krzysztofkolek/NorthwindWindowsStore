@@ -16,7 +16,7 @@ A simple **Windows Store App** project based on the **.Net** platform.  It' s me
 
  1. Fulfill all guidelines
 
- 2. Moderest performance
+ 2. Average performance
 
  3. N-tier architecture
 
