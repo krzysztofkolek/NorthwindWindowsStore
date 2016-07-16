@@ -43,14 +43,21 @@ The application was divided into several layers, as shown on the following image
 ![](./Utils/GitImages/Schema.png)
 
  1. **GUI section** 
- **WSA** - part of the application dedicated for user interface utilizing the most of the Telerik components as possible.
- **ViewModel** - the same part (included) as the server part only extended for specialized views.
- 2. **Server section** 
-**API** - api interface using the *ASP.Net WebAPI* framework. The API based on it's simplicity isn't secured. 
-**Service** - decides what to use DB View or DB Table according to the provided model. The service layer provides also the transformation functionality DBModel to ViewModel.
-**ViewModel** - model of data that will be sent and then displayed in the application.
-**DAL** - the layer realises a generic repository pattern for data access.
-**DBModel** - models for *DAL*.
+ 
+ 	**WSA** - part of the application dedicated for user interface utilizing the most of the Telerik components as possible.
+ 
+ 	**ViewModel** - the same part (included) as the server part only extended for specialized views.
+ 2. **Server section**
+  
+	**API** - api interface using the *ASP.Net WebAPI* framework. The API based on it's simplicity isn't secured. 
+
+	**Service** - decides what to use DB View or DB Table according to the provided model. The service layer provides also the transformation functionality DBModel to ViewModel.
+
+	**ViewModel** - model of data that will be sent and then displayed in the application.
+
+	**DAL** - the layer realises a generic repository pattern for data access.
+
+	**DBModel** - models for *DAL*.
 <i class="icon-ok"> End result
 ------------------------------
 
