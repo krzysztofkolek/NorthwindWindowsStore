@@ -7,6 +7,7 @@
     {
         public BaseVM()
         {
+            Member = new T();
         }
 
         protected T Member { get; set; }

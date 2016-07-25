@@ -1,15 +1,11 @@
 namespace NorthwindWindowsStore.ViewModel
 {
     using System;
-    using System.Collections.Generic;
 
     public partial class EmployeeViewModel
     {
         public EmployeeViewModel()
         {
-            Employees1 = new HashSet<EmployeeViewModel>();
-            Orders = new HashSet<OrderViewModel>();
-            Territories = new HashSet<TerritoryViewModel>();
         }
         public int EmployeeID { get; set; }
         public string LastName { get; set; }
@@ -29,9 +25,5 @@ namespace NorthwindWindowsStore.ViewModel
         public string Notes { get; set; }
         public int? ReportsTo { get; set; }
         public string PhotoPath { get; set; }
-        public virtual ICollection<EmployeeViewModel> Employees1 { get; set; }
-        public virtual EmployeeViewModel Employee1 { get; set; }
-        public virtual ICollection<OrderViewModel> Orders { get; set; }
-        public virtual ICollection<TerritoryViewModel> Territories { get; set; }
     }
 }
