@@ -4,7 +4,7 @@ namespace NorthwindWindowsStore.DAL.Model
     using System.Collections.Generic;
 
 
-    public partial class Supplier : ISupplier
+    public partial class Supplier : ISupplier, ITable
     {
         public Supplier()
         {

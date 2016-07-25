@@ -4,7 +4,7 @@ namespace NorthwindWindowsStore.DAL.Model
     using System.Collections.Generic;
 
 
-    public partial class Shipper : IShipper
+    public partial class Shipper : IShipper, ITable
     {
         public Shipper()
         {

@@ -4,7 +4,7 @@ namespace NorthwindWindowsStore.DAL.Model
     using System.Collections.Generic;
 
 
-    public partial class Territory : ITerritory
+    public partial class Territory : ITerritory, ITable
     {
         public Territory()
         {

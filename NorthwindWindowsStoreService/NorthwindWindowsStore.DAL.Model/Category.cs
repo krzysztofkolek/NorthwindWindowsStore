@@ -3,7 +3,7 @@ namespace NorthwindWindowsStore.DAL.Model
     using NorthwindWindowsStore.DAL.Model.Interface;
     using System.Collections.Generic;
 
-    public partial class Category : ICategory
+    public partial class Category : ICategory, ITable
     {
         public Category()
         {

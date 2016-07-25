@@ -79,6 +79,8 @@
     <Compile Include="Interface\ISupplier.cs" />
     <Compile Include="Interface\ITerritory.cs" />
     <Compile Include="Invoice.cs" />
+    <Compile Include="Interface\ITable.cs" />
+    <Compile Include="Interface\IView.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Orders_Qry.cs" />
     <Compile Include="Order_Detail.cs" />
@@ -93,9 +95,6 @@
     <Compile Include="Sales_by_Category.cs" />
     <Compile Include="Sales_Totals_by_Amount.cs" />
     <Compile Include="Shipper.cs" />
-    <Compile Include="SimpleCustomer.cs" />
-    <Compile Include="SimpleEmployee.cs" />
-    <Compile Include="SimpleSupplier.cs" />
     <Compile Include="Summary_of_Sales_by_Quarter.cs" />
     <Compile Include="Summary_of_Sales_by_Year.cs" />
     <Compile Include="Supplier.cs" />

@@ -3,7 +3,7 @@ namespace NorthwindWindowsStore.DAL.Model
     using NorthwindWindowsStore.DAL.Model.Interface;
 
 
-    public partial class Order_Detail : IOrderDetail
+    public partial class Order_Detail : IOrderDetail, ITable
     {
         public int OrderID { get; set; }
         public int ProductID { get; set; }

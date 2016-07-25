@@ -2,15 +2,18 @@
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AD04DD2F-E5F2-4755-9F44-8FAFC5FDD188}</ProjectGuid>
+    <ProjectGuid>{BBAA2D43-52E0-4A68-ABCF-D9FC9E2E6942}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NorthwindWindowsStore.ViewModel</RootNamespace>
     <AssemblyName>NorthwindWindowsStore.ViewModel</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,33 +33,27 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
+    <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlphabeticalListOfProductViewModel.cs" />
-    <Compile Include="CategoryViewModelViewModel.cs" />
     <Compile Include="CategorySalesFor1997ViewModel.cs" />
+    <Compile Include="CategoryViewModelViewModel.cs" />
     <Compile Include="CurrentProductListViewModel.cs" />
-    <Compile Include="CustomerViewModelViewModel.cs" />
-    <Compile Include="CustomerDemographicViewModel.cs" />
     <Compile Include="CustomerAndSuppliersByCityViewModel.cs" />
+    <Compile Include="CustomerDemographicViewModel.cs" />
+    <Compile Include="CustomerViewModelViewModel.cs" />
     <Compile Include="EmployeeViewModel.cs" />
     <Compile Include="InvoiceViewModel.cs" />
-    <Compile Include="OrderViewModel.cs" />
-    <Compile Include="OrdersQryViewModel.cs" />
-    <Compile Include="OrderDetailViewModel.cs" />
     <Compile Include="OrderDetailsExtendedViewModel.cs" />
+    <Compile Include="OrderDetailViewModel.cs" />
+    <Compile Include="OrdersQryViewModel.cs" />
     <Compile Include="OrderSubtotalViewModel.cs" />
-    <Compile Include="ProductViewModelViewModel.cs" />
+    <Compile Include="OrderViewModel.cs" />
     <Compile Include="ProductsAboveAveragePriceViewModel.cs" />
-    <Compile Include="ProductsByCategoryViewModel.cs" />
     <Compile Include="ProductSalesFor1997ViewModel.cs" />
+    <Compile Include="ProductsByCategoryViewModel.cs" />
+    <Compile Include="ProductViewModelViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegionViewModel.cs" />
     <Compile Include="SalesByCategoryViewModel.cs" />
@@ -70,7 +67,7 @@
     <Compile Include="SupplierViewModel.cs" />
     <Compile Include="TerritoryViewModel.cs" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

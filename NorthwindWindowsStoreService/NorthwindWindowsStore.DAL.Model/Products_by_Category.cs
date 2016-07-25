@@ -5,7 +5,7 @@ namespace NorthwindWindowsStore.DAL.Model
     using System.Collections.Generic;
     
         
-    public partial class Products_by_Category : IProductsByCategory
+    public partial class Products_by_Category : IProductsByCategory, IView
     {
         public string CategoryName { get; set; }
         public string ProductName { get; set; }

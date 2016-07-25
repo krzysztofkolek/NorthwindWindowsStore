@@ -4,7 +4,7 @@ namespace NorthwindWindowsStore.DAL.Model
     using System.Collections.Generic;
 
 
-    public partial class CustomerDemographic : ICustomerDemographic
+    public partial class CustomerDemographic : ICustomerDemographic, ITable
     {
         public CustomerDemographic()
         {

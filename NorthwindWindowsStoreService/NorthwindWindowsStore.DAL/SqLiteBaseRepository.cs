@@ -19,7 +19,7 @@
 
         public SQLiteConnection DbConnection()
         {
-            return new SQLiteConnection("Data Source=" + DbFile);
+            return new SQLiteConnection("Data Source=" + DbFile, true);
         }
     }
 }

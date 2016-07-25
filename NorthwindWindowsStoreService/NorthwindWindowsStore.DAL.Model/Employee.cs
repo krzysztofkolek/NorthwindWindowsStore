@@ -4,7 +4,7 @@ namespace NorthwindWindowsStore.DAL.Model
     using System;
     using System.Collections.Generic;
 
-    public class Employee : IEmployee
+    public class Employee : IEmployee, ITable
     {
         public Employee()
         {

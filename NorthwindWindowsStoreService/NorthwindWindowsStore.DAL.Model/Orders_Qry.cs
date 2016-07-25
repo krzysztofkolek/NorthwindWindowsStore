@@ -4,7 +4,7 @@ namespace NorthwindWindowsStore.DAL.Model
     using System;
 
 
-    public partial class Orders_Qry : IOrdersQry
+    public partial class Orders_Qry : IOrdersQry, IView
     {
         public int OrderID { get; set; }
         public string CustomerID { get; set; }

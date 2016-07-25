@@ -37,6 +37,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="TinyMapper">
+      <HintPath>..\packages\TinyMapper.2.0.8\lib\net45\TinyMapper.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlphabeticalListOfProductService.cs" />
@@ -49,6 +52,9 @@
     <Compile Include="CustomerAndSuppliersByCityService.cs" />
     <Compile Include="EmployeeService.cs" />
     <Compile Include="InvoiceService.cs" />
+    <Compile Include="Map\BaseMapper.cs" />
+    <Compile Include="Map\Table\EmployeeMap.cs" />
+    <Compile Include="Map\TinyMapperStaticConfiguration.cs" />
     <Compile Include="OrderService.cs" />
     <Compile Include="OrdersQryService.cs" />
     <Compile Include="OrderDetailService.cs" />
@@ -81,9 +87,15 @@
       <Name>NorthwindWindowsStore.DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\NorthwindWindowsStore.ViewModel\NorthwindWindowsStore.ViewModel.csproj">
-      <Project>{ad04dd2f-e5f2-4755-9f44-8fafc5fdd188}</Project>
+      <Project>{bbaa2d43-52e0-4a68-abcf-d9fc9e2e6942}</Project>
       <Name>NorthwindWindowsStore.ViewModel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Map\View\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

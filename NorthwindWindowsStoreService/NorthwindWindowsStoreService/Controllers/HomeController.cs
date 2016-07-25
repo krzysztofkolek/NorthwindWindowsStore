@@ -9,8 +9,8 @@ namespace NorthwindWindowsStoreService.Controllers
         public ActionResult Index()
         {
             ViewBag.Title = "Home Page";
-            var path = String.Format(@"{0}bin\App_Data", Server.MapPath("~"));
-            var test = new EmployeeService(path).GetAll();
+            //var path = String.Format(@"{0}bin\App_Data", Server.MapPath("~"));
+            //var test = new EmployeeService(path).GetAll();
             return View();
         }
     }

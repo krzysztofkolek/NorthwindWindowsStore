@@ -4,7 +4,7 @@ namespace NorthwindWindowsStore.DAL.Model
     using System;
     using System.Collections.Generic;
 
-    public partial class Order : IOrder
+    public partial class Order : IOrder, ITable
     {
         public Order()
         {

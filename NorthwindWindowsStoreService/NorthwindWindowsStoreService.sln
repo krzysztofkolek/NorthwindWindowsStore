@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindWindowsStore.DAL.M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindWindowsStore.Service", "NorthwindWindowsStore.Service\NorthwindWindowsStore.Service.csproj", "{1A366164-76C4-4EF8-986B-B9369C288DED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindWindowsStore.ViewModel", "NorthwindWindowsStore.ViewModel\NorthwindWindowsStore.ViewModel.csproj", "{AD04DD2F-E5F2-4755-9F44-8FAFC5FDD188}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindWindowsStore.ViewModel", "NorthwindWindowsStore.ViewModel\NorthwindWindowsStore.ViewModel.csproj", "{BBAA2D43-52E0-4A68-ABCF-D9FC9E2E6942}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{1A366164-76C4-4EF8-986B-B9369C288DED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A366164-76C4-4EF8-986B-B9369C288DED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A366164-76C4-4EF8-986B-B9369C288DED}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AD04DD2F-E5F2-4755-9F44-8FAFC5FDD188}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AD04DD2F-E5F2-4755-9F44-8FAFC5FDD188}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AD04DD2F-E5F2-4755-9F44-8FAFC5FDD188}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AD04DD2F-E5F2-4755-9F44-8FAFC5FDD188}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBAA2D43-52E0-4A68-ABCF-D9FC9E2E6942}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBAA2D43-52E0-4A68-ABCF-D9FC9E2E6942}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBAA2D43-52E0-4A68-ABCF-D9FC9E2E6942}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBAA2D43-52E0-4A68-ABCF-D9FC9E2E6942}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

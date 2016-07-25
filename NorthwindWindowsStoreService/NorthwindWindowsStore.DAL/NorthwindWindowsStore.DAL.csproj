@@ -76,6 +76,7 @@
   <ItemGroup>
     <Compile Include="AlphabeticalListOfProductRepository.cs" />
     <Compile Include="BaseRepository.cs" />
+    <Compile Include="BaseView.cs" />
     <Compile Include="CategoryRepository.cs" />
     <Compile Include="CategorySalesFor1997Repository.cs" />
     <Compile Include="CurrentProductListRepository.cs" />

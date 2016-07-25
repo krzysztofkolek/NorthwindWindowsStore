@@ -65,14 +65,21 @@
             return null;
         }
 
-        public virtual async Task<IEnumerable<T>> GetAll()
+        public virtual IEnumerable<T> GetAll()
         {
+            List<T> result = new List<T>();
             using (IDbConnection db = Connection)
             {
+                db.Open();
                 String query = String.Format("Select * From {0}", GetTableName());
-                return db.Query<T>(query);
+                var tempResult = db.Query<T>(query);
+                foreach (var entity in tempResult)
+                {
+                    result.Add(entity);
+                }
+                db.Close();
             }
-            return null;
+            return result;
         }
     }
 }

@@ -3,7 +3,7 @@ namespace NorthwindWindowsStore.DAL.Model
     using NorthwindWindowsStore.DAL.Model.Interface;
     using System;
 
-    public partial class Invoice : IInvoice
+    public partial class Invoice : IInvoice, IView
     {
         public string ShipName { get; set; }
         public string ShipAddress { get; set; }

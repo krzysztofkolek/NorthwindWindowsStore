@@ -5,7 +5,7 @@ namespace NorthwindWindowsStore.DAL.Model
     using System.Collections.Generic;
 
 
-    public partial class Region : IRegion
+    public partial class Region : IRegion, ITable
     {
         public Region()
         {
