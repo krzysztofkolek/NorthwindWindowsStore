@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="NorthwindWindowsStore.Views.SuppliersMain"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NorthwindWindowsStore.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:Name="backButton" Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
+			Style="{StaticResource NavigationBackButtonNormalStyle}"
+			VerticalAlignment="Top"
+			AutomationProperties.Name="Back"
+			AutomationProperties.AutomationId="BackButton"
+			AutomationProperties.ItemType="Navigation Button" FontFamily="Global User Interface"/>
+        <TextBlock x:Name="pageTitle" Text="Suppliers" Style="{StaticResource HeaderTextBlockStyle}" 
+			IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Top" Margin="121,58,141,0" HorizontalAlignment="Center" FontSize="50" FontFamily="Times New Roman" FontWeight="Bold" />
+    </Grid>
+</Page>
