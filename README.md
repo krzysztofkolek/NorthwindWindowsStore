@@ -3,12 +3,12 @@
 
 A simple **Windows Store App** project based on the **.Net** platform.  It' s meets the following guidelines:
 
- - Windows Store App 
- - MVVM pattern 
- - SQLite 
- - SQlite ORM framework 
+ - Windows Store App
+ - MVVM pattern
+ - SQLite
+ - SQLite ORM framework
  - REST, JSON
- 
+
 
 <i class="icon-list"> Goals
 ------------------------------
@@ -30,7 +30,7 @@ The planning includes several steps of research. the main
 
  - **Databse** - the *Northwind* database was selected.
 
- - **ORM** - *Dapper* was selected, because of its high performance and the simplicity it provides. 
+ - **ORM** - *Dapper* was selected, because of its high performance and the simplicity it provides.
 
  - **Additional GUI components** - the components bundle of choice is *Telerik*.
 
@@ -42,14 +42,14 @@ The planning includes several steps of research. the main
 The application was divided into several layers, as shown on the following image
 ![](./Utils/GitImages/Schema.png)
 
- 1. **GUI section** 
- 
+ 1. **GUI section**
+
  	**WPF** - part of the application dedicated for user interface utilizing the most of the Telerik components as possible.
- 
+
  	**ViewModel** - the same part (included) as the server part only extended for specialized views.
  2. **Server section**
-  
-	**API** - api interface using the *ASP.Net WebAPI* framework. The API based on it's simplicity isn't secured. 
+
+	**API** - api interface using the *ASP.Net WebAPI* framework. The API based on it's simplicity isn't secured.
 
 	**Service** - decides what to use DB View or DB Table according to the provided model. The service layer provides also the transformation functionality DBModel to ViewModel.
 
@@ -58,6 +58,8 @@ The application was divided into several layers, as shown on the following image
 	**DAL** - the layer realises a generic repository pattern for data access.
 
 	**DBModel** - models for *DAL*.
+
 <i class="icon-ok"> End result
 ------------------------------
-
+Employees details page.
+![](./Utils/GitImages/1.png)
