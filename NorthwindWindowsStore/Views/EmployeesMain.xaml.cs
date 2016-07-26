@@ -1,4 +1,6 @@
 ﻿using NorthwindWindowsStore.Common;
+using NorthwindWindowsStore.Utils;
+using System.Collections.Generic;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
@@ -12,7 +14,6 @@ namespace NorthwindWindowsStore.Views
     /// </summary>
     public sealed partial class EmployeesMain : Page
     {
-
         private NavigationHelper navigationHelper;
         /// <summary>
         /// NavigationHelper is used on each page to aid in navigation and 
@@ -25,6 +26,7 @@ namespace NorthwindWindowsStore.Views
 
         public EmployeesMain()
         {
+
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;
@@ -35,6 +37,16 @@ namespace NorthwindWindowsStore.Views
             // Start listening for Window size changes 
             // to change from showing two panes to showing a single pane
             Window.Current.SizeChanged += Window_SizeChanged;
+
+            List<ChartData> data = new List<ChartData>();
+            data.Add(new ChartData() { Label = "1", Value = 1 });
+            data.Add(new ChartData() { Label = "2", Value = 2 });
+            data.Add(new ChartData() { Label = "3", Value = 5 });
+            data.Add(new ChartData() { Label = "4", Value = 11 });
+
+            this.PieChart.Series[0].ItemsSource = data;
+            this.PieChart.Series[0].ShowLabels = true;
+
         }
 
         private void Show_All_Click(object sender, RoutedEventArgs e)

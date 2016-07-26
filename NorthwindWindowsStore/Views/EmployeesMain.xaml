@@ -1,4 +1,4 @@
-﻿<Page
+﻿<Page xmlns:Chart="using:Telerik.UI.Xaml.Controls.Chart" 
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:NorthwindWindowsStore.Views"
@@ -22,13 +22,21 @@
                         AutomationProperties.ItemType="Navigation Button"/>
         <TextBlock x:Name="pageTitle" Text="Employees" Style="{StaticResource HeaderTextBlockStyle}" 
 			IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Top" Margin="121,58,141,0" HorizontalAlignment="Center" FontSize="50" FontFamily="Times New Roman" FontWeight="Bold" />
-        <Primitives:RadSideDrawer Margin="0,110,0,0" VerticalAlignment="Top" Height="658">
+        <Primitives:RadSideDrawer Name="radSlider" Margin="0,110,0,0" VerticalAlignment="Top" Height="658">
             <Primitives:RadSideDrawer.DrawerContent>
                 <StackPanel Height="603" VerticalAlignment="Bottom">
                     <Button Name="ShowAll"  Content="Show all" Click="Show_All_Click"></Button>
                 </StackPanel>
             </Primitives:RadSideDrawer.DrawerContent>
         </Primitives:RadSideDrawer>
-        <ScrollViewer Margin="205,145,21,18"/>
+        <ScrollViewer Margin="205,145,21,18">
+            <Chart:RadPieChart x:Name="PieChart"  PaletteName="DefaultDark">
+                <Chart:PieSeries ItemsSource="{Binding Data}">
+                    <Chart:PieSeries.ValueBinding>
+                        <Chart:PropertyNameDataPointBinding PropertyName="Value"/>
+                    </Chart:PieSeries.ValueBinding>
+                </Chart:PieSeries>
+            </Chart:RadPieChart>
+        </ScrollViewer>
     </Grid>
 </Page>
