@@ -20,6 +20,8 @@
                 config.Bind(x => x.Country, o => o.Country);
                 config.Bind(x => x.Phone, o => o.Phone);
                 config.Bind(x => x.Fax, o => o.Fax);
+                config.Ignore(x => x.Orders);
+                config.Ignore(x => x.CustomerDemographics);
             });
         }
     }
