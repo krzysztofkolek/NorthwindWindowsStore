@@ -21,6 +21,8 @@
                 config.Bind(x => x.Phone, o => o.Phone);
                 config.Bind(x => x.Fax, o => o.Fax);
                 config.Bind(x => x.HomePage, o => o.HomePage);
+
+                config.Ignore(x => x.Products);
             });
         }
     }

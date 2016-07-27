@@ -12,6 +12,8 @@
                 config.Bind(x => x.ShipperID, o => o.ShipperID);
                 config.Bind(x => x.CompanyName, o => o.CompanyName);
                 config.Bind(x => x.Phone, o => o.Phone);
+
+                config.Ignore(x => x.Orders);
             });
         }
     }
