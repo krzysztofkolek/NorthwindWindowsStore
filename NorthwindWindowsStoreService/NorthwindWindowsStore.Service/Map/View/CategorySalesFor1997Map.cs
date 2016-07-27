@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace NorthwindWindowsStore.Service.Map.View
 {
-    class CategorySalesFor1997Map
+    using NorthwindWindowsStore.DAL.Model;
+    using NorthwindWindowsStore.ViewModel;
+
+    public class CategorySalesFor1997Map : BaseMapper<Category_Sales_for_1997, CategorySalesFor1997ViewModel>
     {
+        public override System.Action<Nelibur.ObjectMapper.Bindings.IBindingConfig<Category_Sales_for_1997, CategorySalesFor1997ViewModel>> GetConfig()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

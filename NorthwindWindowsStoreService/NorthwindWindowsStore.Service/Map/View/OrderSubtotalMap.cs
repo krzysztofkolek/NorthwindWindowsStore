@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace NorthwindWindowsStore.Service.Map.View
 {
-    class OrderSubtotalMap
+    using NorthwindWindowsStore.DAL.Model;
+    using NorthwindWindowsStore.ViewModel;
+
+    public class OrderSubtotalMap : BaseMapper<Order_Subtotal, OrderSubtotalViewModel>
     {
+        public override System.Action<Nelibur.ObjectMapper.Bindings.IBindingConfig<Order_Subtotal, OrderSubtotalViewModel>> GetConfig()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

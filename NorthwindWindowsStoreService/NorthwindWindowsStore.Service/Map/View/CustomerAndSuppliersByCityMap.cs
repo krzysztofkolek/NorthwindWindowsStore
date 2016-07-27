@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace NorthwindWindowsStore.Service.Map.View
 {
-    class CustomerAndSuppliersByCityMap
+    using NorthwindWindowsStore.DAL.Model;
+    using NorthwindWindowsStore.ViewModel;
+
+    public class CustomerAndSuppliersByCityMap : BaseMapper<Customer_and_Suppliers_by_City, CustomerAndSuppliersByCityViewModel>
     {
+        public override System.Action<Nelibur.ObjectMapper.Bindings.IBindingConfig<Customer_and_Suppliers_by_City, CustomerAndSuppliersByCityViewModel>> GetConfig()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace NorthwindWindowsStore.Service.Map.View
 {
-    class InvoiceMap
+    using NorthwindWindowsStore.DAL.Model;
+    using NorthwindWindowsStore.ViewModel;
+
+    public class InvoiceMap : BaseMapper<Invoice, InvoiceViewModel>
     {
+        public override System.Action<Nelibur.ObjectMapper.Bindings.IBindingConfig<Invoice, InvoiceViewModel>> GetConfig()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

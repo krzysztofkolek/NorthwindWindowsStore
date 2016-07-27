@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace NorthwindWindowsStore.Service.Map.View
 {
-    class CurrentProductListMap
+    using NorthwindWindowsStore.DAL.Model;
+    using NorthwindWindowsStore.ViewModel;
+
+    public class CurrentProductListMap : BaseMapper<Current_Product_List, CurrentProductListViewModel>
     {
+        public override System.Action<Nelibur.ObjectMapper.Bindings.IBindingConfig<Current_Product_List, CurrentProductListViewModel>> GetConfig()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

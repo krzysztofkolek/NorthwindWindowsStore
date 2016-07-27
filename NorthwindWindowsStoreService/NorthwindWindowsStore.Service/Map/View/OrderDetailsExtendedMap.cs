@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace NorthwindWindowsStore.Service.Map.View
 {
-    class OrderDetailsExtendedMap
+    using NorthwindWindowsStore.DAL.Model;
+    using NorthwindWindowsStore.ViewModel;
+
+    public class OrderDetailsExtendedMap : BaseMapper<Order_Details_Extended, OrderDetailsExtendedViewModel>
     {
+        public override System.Action<Nelibur.ObjectMapper.Bindings.IBindingConfig<Order_Details_Extended, OrderDetailsExtendedViewModel>> GetConfig()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NorthwindWindowsStore.Service.Map.View
+﻿namespace NorthwindWindowsStore.Service.Map.View
 {
-    class AlphabeticalListOfProductMap
+    using NorthwindWindowsStore.DAL.Model;
+    using NorthwindWindowsStore.ViewModel;
+
+    public class AlphabeticalListOfProductMap : BaseMapper<Alphabetical_list_of_product, AlphabeticalListOfProductViewModel>
     {
+        public override System.Action<Nelibur.ObjectMapper.Bindings.IBindingConfig<Alphabetical_list_of_product, AlphabeticalListOfProductViewModel>> GetConfig()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
