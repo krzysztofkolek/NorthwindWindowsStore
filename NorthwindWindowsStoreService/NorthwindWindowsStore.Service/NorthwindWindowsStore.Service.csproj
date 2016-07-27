@@ -60,6 +60,21 @@
     <Compile Include="Map\Table\ShipperMap.cs" />
     <Compile Include="Map\Table\SupplierMap.cs" />
     <Compile Include="Map\TinyMapperStaticConfiguration.cs" />
+    <Compile Include="Map\View\AlphabeticalListOfProductMap.cs" />
+    <Compile Include="Map\View\CategorySalesFor1997Map.cs" />
+    <Compile Include="Map\View\CurrentProductListMap.cs" />
+    <Compile Include="Map\View\CustomerAndSuppliersByCityMap.cs" />
+    <Compile Include="Map\View\InvoiceMap.cs" />
+    <Compile Include="Map\View\OrderDetailsExtendedMap.cs" />
+    <Compile Include="Map\View\OrdersQryMap.cs" />
+    <Compile Include="Map\View\OrderSubtotalMap.cs" />
+    <Compile Include="Map\View\ProductsAboveAveragePriceMap.cs" />
+    <Compile Include="Map\View\ProductSalesFor1997Map.cs" />
+    <Compile Include="Map\View\ProductsByCategoryMap.cs" />
+    <Compile Include="Map\View\SalesByCategoryMap.cs" />
+    <Compile Include="Map\View\SalesTotalsByAmountMap.cs" />
+    <Compile Include="Map\View\SummaryOfSalesByQuarterMap.cs" />
+    <Compile Include="Map\View\SummaryOfSalesByYearMap.cs" />
     <Compile Include="OrderService.cs" />
     <Compile Include="OrdersQryService.cs" />
     <Compile Include="OrderDetailService.cs" />
@@ -100,7 +115,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Map\View\" />
+    <Folder Include="Service\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
