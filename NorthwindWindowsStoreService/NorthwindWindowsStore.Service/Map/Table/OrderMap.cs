@@ -24,6 +24,11 @@
                 config.Bind(x => x.ShipRegion, o => o.ShipRegion);
                 config.Bind(x => x.ShipPostalCode, o => o.ShipPostalCode);
                 config.Bind(x => x.ShipCountry, o => o.ShipCountry);
+
+                config.Ignore(x => x.Customer);
+                config.Ignore(x => x.Employee);
+                config.Ignore(x => x.Order_Details);
+                config.Ignore(x => x.Shipper);
             });
         }
     }
