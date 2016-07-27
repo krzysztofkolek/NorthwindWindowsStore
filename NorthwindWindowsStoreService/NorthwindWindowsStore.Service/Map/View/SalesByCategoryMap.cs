@@ -8,7 +8,13 @@ namespace NorthwindWindowsStore.Service.Map.View
     {
         public override System.Action<Nelibur.ObjectMapper.Bindings.IBindingConfig<Sales_by_Category, SalesByCategoryViewModel>> GetConfig()
         {
-            throw new System.NotImplementedException();
+            return new System.Action<Nelibur.ObjectMapper.Bindings.IBindingConfig<Sales_by_Category, SalesByCategoryViewModel>>(config =>
+            {
+                config.Bind(x => x.CategoryID, o => o.CategoryID);
+                config.Bind(x => x.CategoryName, o => o.CategoryName);
+                config.Bind(x => x.ProductName, o => o.ProductName);
+                config.Bind(x => x.ProductSales, o => o.ProductSales);
+            });
         }
     }
 }

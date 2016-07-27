@@ -8,7 +8,7 @@ namespace NorthwindWindowsStore.Service.Map.View
     {
         public override System.Action<Nelibur.ObjectMapper.Bindings.IBindingConfig<Customer_and_Suppliers_by_City, CustomerAndSuppliersByCityViewModel>> GetConfig()
         {
-            throw new System.NotImplementedException();
+            return new System.Action<Nelibur.ObjectMapper.Bindings.IBindingConfig<Customer_and_Suppliers_by_City, CustomerAndSuppliersByCityViewModel>>(config => { });
         }
     }
 }

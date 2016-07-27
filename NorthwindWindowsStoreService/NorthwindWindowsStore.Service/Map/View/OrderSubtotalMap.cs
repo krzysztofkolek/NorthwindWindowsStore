@@ -8,7 +8,11 @@ namespace NorthwindWindowsStore.Service.Map.View
     {
         public override System.Action<Nelibur.ObjectMapper.Bindings.IBindingConfig<Order_Subtotal, OrderSubtotalViewModel>> GetConfig()
         {
-            throw new System.NotImplementedException();
+            return new System.Action<Nelibur.ObjectMapper.Bindings.IBindingConfig<Order_Subtotal, OrderSubtotalViewModel>>(config =>
+            {
+                config.Bind(x => x.OrderID, o => o.OrderID);
+                config.Bind(x => x.Subtotal, o => o.Subtotal);
+            });
         }
     }
 }
