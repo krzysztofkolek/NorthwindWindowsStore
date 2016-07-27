@@ -53,7 +53,12 @@
     <Compile Include="EmployeeService.cs" />
     <Compile Include="InvoiceService.cs" />
     <Compile Include="Map\BaseMapper.cs" />
+    <Compile Include="Map\Table\CustomerMap.cs" />
     <Compile Include="Map\Table\EmployeeMap.cs" />
+    <Compile Include="Map\Table\OrderMap.cs" />
+    <Compile Include="Map\Table\ProductMap.cs" />
+    <Compile Include="Map\Table\ShipperMap.cs" />
+    <Compile Include="Map\Table\SupplierMap.cs" />
     <Compile Include="Map\TinyMapperStaticConfiguration.cs" />
     <Compile Include="OrderService.cs" />
     <Compile Include="OrdersQryService.cs" />
