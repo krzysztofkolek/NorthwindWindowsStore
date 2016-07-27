@@ -19,6 +19,10 @@
                 config.Bind(x => x.UnitsOnOrder, o => o.UnitsOnOrder);
                 config.Bind(x => x.ReorderLevel, o => o.ReorderLevel);
                 config.Bind(x => x.Discontinued, o => o.Discontinued);
+
+                config.Ignore(x => x.Category);
+                config.Ignore(x => x.Order_Details);
+                config.Ignore(x => x.Supplier);
             });
         }
     }
