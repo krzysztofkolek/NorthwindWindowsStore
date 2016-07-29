@@ -63,3 +63,4 @@ The application was divided into several layers, as shown on the following image
 ------------------------------
 Employees details page.
 ![](./Utils/GitImages/1.png)
+![](./Utils/GitImages/2.png)

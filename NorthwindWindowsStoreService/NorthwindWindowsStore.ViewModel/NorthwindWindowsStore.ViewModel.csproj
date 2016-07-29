@@ -43,6 +43,7 @@
     <Compile Include="CustomerAndSuppliersByCityViewModel.cs" />
     <Compile Include="CustomerDemographicViewModel.cs" />
     <Compile Include="CustomerViewModelViewModel.cs" />
+    <Compile Include="EmployeeGetPercentInRelationToPositionViewModel.cs" />
     <Compile Include="EmployeeViewModel.cs" />
     <Compile Include="InvoiceViewModel.cs" />
     <Compile Include="OrderDetailsExtendedViewModel.cs" />

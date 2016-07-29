@@ -112,6 +112,7 @@
     <Compile Include="Deserialization\CustomerAndSuppliersByCityViewModel.cs" />
     <Compile Include="Deserialization\CustomerDemographicViewModel.cs" />
     <Compile Include="Deserialization\CustomerViewModelViewModel.cs" />
+    <Compile Include="Deserialization\EmployeeGetPercentInRelationToPositionViewModel.cs" />
     <Compile Include="Deserialization\EmployeeViewModel.cs" />
     <Compile Include="Deserialization\InvoiceViewModel.cs" />
     <Compile Include="Deserialization\OrderDetailsExtendedViewModel.cs" />
@@ -123,6 +124,7 @@
     <Compile Include="Deserialization\ProductSalesFor1997ViewModel.cs" />
     <Compile Include="Deserialization\ProductsByCategoryViewModel.cs" />
     <Compile Include="Deserialization\ProductViewModelViewModel.cs" />
+    <Compile Include="EmployeeGetPercentInRelationToPositionVM.cs" />
     <Compile Include="EmployeeVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Deserialization\RegionViewModel.cs" />
