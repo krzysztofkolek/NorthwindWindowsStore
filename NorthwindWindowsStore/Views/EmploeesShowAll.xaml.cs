@@ -58,8 +58,6 @@ namespace NorthwindWindowsStore.Views
             // to change from showing two panes to showing a single pane
             Window.Current.SizeChanged += Window_SizeChanged;
             this.InvalidateVisualState();
-
-            List<EmployeeVM> temp = NorthwindWindowsStore.Utils.ContentManager.GetContent<EmployeeViewModel, EmployeeVM>("Employees/GetAll").Result;
         }
 
         void itemListView_SelectionChanged(object sender, SelectionChangedEventArgs e)

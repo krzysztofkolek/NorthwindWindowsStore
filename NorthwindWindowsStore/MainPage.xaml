@@ -22,7 +22,7 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <StackPanel Grid.Column="0" Orientation="Vertical" Margin="0,0,0,-546" Height="608" VerticalAlignment="Stretch">
+            <StackPanel Grid.Column="0"  Orientation="Vertical" Margin="0,13,0,-80">
                 <Button HorizontalAlignment="Stretch" Margin="0,0,-3,0" x:Name="Employees" Click="Employees_Click" Content="Employees"/>
                 <Button HorizontalAlignment="Stretch" Margin="0,0,-3,0" x:Name="Customers" Click="Customers_Click" Content="Customers"/>
                 <Button HorizontalAlignment="Stretch" Margin="0,0,-3,0" x:Name="Orders" Click="Orders_Click" Content="Orders"/>
@@ -30,6 +30,8 @@
                 <Button HorizontalAlignment="Stretch" Margin="0,0,-3,0" x:Name="Shippers" Click="Shippers_Click" Content="Shippers"/>
                 <Button HorizontalAlignment="Stretch" Margin="0,0,-3,0" x:Name="Suppliers" Click="Suppliers_Click" Content="Suppliers"/>
             </StackPanel>
+
+            <Image Source="Assets/Logo.scale-100.png" Margin="365,-2,366,2" Grid.Column="1"/>
 
         </Grid>
     </Grid>

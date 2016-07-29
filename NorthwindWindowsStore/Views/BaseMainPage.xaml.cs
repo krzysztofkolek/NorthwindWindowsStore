@@ -6,7 +6,7 @@
     using Windows.UI.Xaml.Controls;
     using Windows.UI.Xaml.Navigation;
 
-    public sealed partial class BaseMainPage : Page
+    public  partial class BaseMainPage : Page
     {
         protected String Title { get; set; }
         private NavigationHelper navigationHelper;
@@ -37,6 +37,64 @@
             this.InvalidateVisualState();
         }
 
+
+        void itemListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (this.UsingLogicalPageNavigation())
+            {
+                this.navigationHelper.GoBackCommand.RaiseCanExecuteChanged();
+            }
+        }
+
+        /// <summary>
+        /// Populates the page with content passed during navigation.  Any saved state is also
+        /// provided when recreating a page from a prior session.
+        /// </summary>
+        /// <param name="sender">
+        /// The source of the event; typically <see cref="NavigationHelper"/>
+        /// </param>
+        /// <param name="e">Event data that provides both the navigation parameter passed to
+        /// <see cref="Frame.Navigate(Type, Object)"/> when this page was initially requested and
+        /// a dictionary of state preserved by this page during an earlier
+        /// session.  The state will be null the first time a page is visited.</param>
+        protected virtual void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
+        {
+            // TODO: Assign a bindable group to Me.DefaultViewModel("Group")
+            // TODO: Assign a collection of bindable items to Me.DefaultViewModel("Items")
+            //defaultViewModel = new ObservableDictionary();
+            //defaultViewModel.Add(new KeyValuePair<string, object>("Title", "FirstName LastName"));
+            if (e.PageState == null)
+            {
+                // When this is a new page, select the first item automatically unless logical page
+                // navigation is being used (see the logical page navigation #region below.)
+                //if (!this.UsingLogicalPageNavigation() && this.itemsViewSource.View != null)
+                //{
+                //    this.itemsViewSource.View.MoveCurrentToFirst();
+                //}
+            }
+            else
+            {
+                // Restore the previously saved state associated with this page
+                //if (e.PageState.ContainsKey("SelectedItem") && this.itemsViewSource.View != null)
+                //{
+                //    // TODO: Invoke Me.itemsViewSource.View.MoveCurrentTo() with the selected
+                //    //       item as specified by the value of pageState("SelectedItem")
+
+                //}
+            }
+        }
+
+        /// <summary>
+        /// Preserves state associated with this page in case the application is suspended or the
+        /// page is discarded from the navigation cache.  Values must conform to the serialization
+        /// requirements of <see cref="SuspensionManager.SessionState"/>.
+        /// </summary>
+        /// <param name="sender">The source of the event; typically <see cref="NavigationHelper"/></param>
+        /// <param name="e">Event data that provides an empty dictionary to be populated with
+        /// serializable state.</param>
+        protected virtual void navigationHelper_SaveState(object sender, SaveStateEventArgs e)
+        {
+        }
 
         #region Logical page navigation
 
@@ -84,11 +142,11 @@
             if (this.UsingLogicalPageNavigation()) this.InvalidateVisualState();
         }
 
-        private bool CanGoBack()
+        protected virtual bool CanGoBack()
         {
             return true;
         }
-        private void GoBack()
+        protected virtual void GoBack()
         {
             this.navigationHelper.GoBack();
         }
@@ -106,10 +164,17 @@
         /// </summary>
         /// <returns>The name of the desired visual state.  This is the same as the name of the
         /// view state except when there is a selected item in portrait and snapped views where
-        /// this additional logical page is represented by adding a suffix of _Detail.</returns>
-        private string DetermineVisualState()
+        /// this additional logical page is represented by adding a suffix of _Detail.</returns>        
+        public virtual string DetermineVisualState()
         {
-            return "MainPage";
+            if (!UsingLogicalPageNavigation())
+                return "PrimaryView";
+
+            //// Update the back button's enabled state when the view state changes
+            //var logicalPageBack = this.UsingLogicalPageNavigation() && this.itemListView.SelectedItem != null;
+
+            //return logicalPageBack ? "SinglePane_Detail" : "SinglePane";
+            return "";
         }
 
         #endregion
