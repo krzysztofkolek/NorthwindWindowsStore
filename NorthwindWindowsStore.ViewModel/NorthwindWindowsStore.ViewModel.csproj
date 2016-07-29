@@ -138,6 +138,7 @@
     <Compile Include="Deserialization\SummaryOfSalesByYearViewModel.cs" />
     <Compile Include="Deserialization\SupplierViewModel.cs" />
     <Compile Include="Deserialization\TerritoryViewModel.cs" />
+    <Compile Include="SupplierVM.cs" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
