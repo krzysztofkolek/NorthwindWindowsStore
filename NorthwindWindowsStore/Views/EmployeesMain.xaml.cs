@@ -1,6 +1,9 @@
 ﻿using NorthwindWindowsStore.Common;
 using NorthwindWindowsStore.Utils;
+using NorthwindWindowsStore.ViewModel;
+using System;
 using System.Collections.Generic;
+using Telerik.UI.Xaml.Controls.Chart;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
@@ -14,6 +17,8 @@ namespace NorthwindWindowsStore.Views
     /// </summary>
     public sealed partial class EmployeesMain : Page
     {
+        private List<EmployeeGetPercentInRelationToPositionVM> _employeesByPrecent = NorthwindWindowsStore.Utils.ContentManager.GetContent<EmployeeGetPercentInRelationToPositionViewModel, EmployeeGetPercentInRelationToPositionVM>("Employees/GetPercentInRelationToPosition").Result;
+
         private NavigationHelper navigationHelper;
         /// <summary>
         /// NavigationHelper is used on each page to aid in navigation and 
@@ -39,13 +44,24 @@ namespace NorthwindWindowsStore.Views
             Window.Current.SizeChanged += Window_SizeChanged;
 
             List<ChartData> data = new List<ChartData>();
-            data.Add(new ChartData() { Label = "1", Value = 1 });
-            data.Add(new ChartData() { Label = "2", Value = 2 });
-            data.Add(new ChartData() { Label = "3", Value = 5 });
-            data.Add(new ChartData() { Label = "4", Value = 11 });
+
+            foreach (var item in _employeesByPrecent)
+            {
+                if (item != null)
+                {
+                    data.Add(new ChartData() { Label = item.Label, Value = item.Value });
+                }
+            }
 
             this.PieChart.Series[0].ItemsSource = data;
             this.PieChart.Series[0].ShowLabels = true;
+
+            this.PieChart.Series[0].LabelDefinitions.Add(
+                 new ChartSeriesLabelDefinition()
+                 {
+                     Strategy = new PieLabelStrategy()
+                 });
+
 
         }
 

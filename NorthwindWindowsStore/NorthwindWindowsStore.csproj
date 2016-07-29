@@ -117,6 +117,7 @@
     <Compile Include="Utils\BasePage.cs" />
     <Compile Include="Utils\ChartData.cs" />
     <Compile Include="Utils\ContentManager.cs" />
+    <Compile Include="Utils\PieLabelStrategy.cs" />
     <Compile Include="Views\BaseMainPage.xaml.cs">
       <DependentUpon>BaseMainPage.xaml</DependentUpon>
     </Compile>

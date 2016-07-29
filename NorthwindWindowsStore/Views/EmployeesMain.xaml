@@ -33,7 +33,7 @@
             <Chart:RadPieChart x:Name="PieChart"  PaletteName="DefaultDark">
                 <Chart:PieSeries ItemsSource="{Binding Data}">
                     <Chart:PieSeries.ValueBinding>
-                        <Chart:PropertyNameDataPointBinding PropertyName="Value"/>
+                        <Chart:PropertyNameDataPointBinding PropertyName="Value"/>                        
                     </Chart:PieSeries.ValueBinding>
                 </Chart:PieSeries>
             </Chart:RadPieChart>
