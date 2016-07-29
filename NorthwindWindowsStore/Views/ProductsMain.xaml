@@ -8,13 +8,23 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button x:Name="backButton" Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="backButton" Grid.Column="0" Grid.Row="0"  Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
 			Style="{StaticResource NavigationBackButtonNormalStyle}"
 			VerticalAlignment="Top"
 			AutomationProperties.Name="Back"
 			AutomationProperties.AutomationId="BackButton"
 			AutomationProperties.ItemType="Navigation Button" FontFamily="Global User Interface"/>
-        <TextBlock x:Name="pageTitle" Text="Products" Style="{StaticResource HeaderTextBlockStyle}" 
+        <TextBlock x:Name="pageTitle" Text="Products" Style="{StaticResource HeaderTextBlockStyle}"  Grid.Column="1" Grid.Row="0"  
 			IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Top" Margin="121,58,141,0" HorizontalAlignment="Center" FontSize="50" FontFamily="Times New Roman" FontWeight="Bold" />
     </Grid>
 </Page>
