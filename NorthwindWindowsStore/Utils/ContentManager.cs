@@ -44,10 +44,13 @@ namespace NorthwindWindowsStore.Utils
                     }
                     serviceVM.AsParallel().ForAll(item =>
                     {
-                        O obj = ci.Invoke(new object[] { item }) as O;
-                        if (obj != null)
+                        if (item != null)
                         {
-                            output.Add(obj);
+                            O obj = ci.Invoke(new object[] { item }) as O;
+                            if (obj != null)
+                            {
+                                output.Add(obj);
+                            }
                         }
                     });
                 }

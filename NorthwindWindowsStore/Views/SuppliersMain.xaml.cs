@@ -6,7 +6,7 @@
     using Windows.UI.Xaml.Controls;
 
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// Suppliers Main pages
     /// </summary>
     public sealed partial class SuppliersMain : Page
     {
