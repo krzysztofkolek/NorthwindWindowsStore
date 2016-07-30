@@ -126,6 +126,7 @@
     <Compile Include="Deserialization\ProductViewModelViewModel.cs" />
     <Compile Include="EmployeeGetPercentInRelationToPositionVM.cs" />
     <Compile Include="EmployeeVM.cs" />
+    <Compile Include="ProductVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Deserialization\RegionViewModel.cs" />
     <Compile Include="Deserialization\SalesByCategoryViewModel.cs" />
@@ -138,6 +139,7 @@
     <Compile Include="Deserialization\SummaryOfSalesByYearViewModel.cs" />
     <Compile Include="Deserialization\SupplierViewModel.cs" />
     <Compile Include="Deserialization\TerritoryViewModel.cs" />
+    <Compile Include="ShipperVM.cs" />
     <Compile Include="SupplierVM.cs" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">

@@ -29,5 +29,38 @@ namespace NorthwindWindowsStore.ViewModel
                 return Member.ProductName;
             }
         }
+
+        public decimal UnitPrice
+        {
+            get
+            {
+                return Member.UnitPrice.Value;
+            }
+        }
+
+        public short UnitsInStock
+        {
+            get
+            {
+                return Member.UnitsInStock.Value;
+            }
+        }
+
+        public short UnitsOnOrder
+        {
+            get
+            {
+                return Member.UnitsOnOrder.Value;
+            }
+        }
+        public string Discontinued
+        {
+            get
+            {
+                if (Member.Discontinued == 1)
+                    return "Discontinued";
+                return "Not discontinued";
+            }
+        }
     }
 }

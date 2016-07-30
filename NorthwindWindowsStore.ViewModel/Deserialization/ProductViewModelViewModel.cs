@@ -19,7 +19,7 @@ namespace NorthwindWindowsStore.ViewModel
         public short? UnitsInStock { get; set; }
         public short? UnitsOnOrder { get; set; }
         public short? ReorderLevel { get; set; }
-        public bool Discontinued { get; set; }
+        public int Discontinued { get; set; }
         public virtual CategoryViewModel Category { get; set; }
         public virtual ICollection<OrderDetailViewModel> Order_Details { get; set; }
         public virtual SupplierViewModel Supplier { get; set; }
