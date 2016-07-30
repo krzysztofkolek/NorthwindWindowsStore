@@ -4,13 +4,14 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:NorthwindWindowsStore.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:Grid="using:Telerik.UI.Xaml.Controls.Grid"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -25,5 +26,14 @@
 			AutomationProperties.ItemType="Navigation Button" FontFamily="Global User Interface"/>
         <TextBlock x:Name="pageTitle" Text="Shippers" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" Grid.Row="0" 
 			IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Top" Margin="121,58,141,0" HorizontalAlignment="Center" FontSize="50" FontFamily="Times New Roman" FontWeight="Bold" />
+
+
+        <Grid:RadDataGrid Name="ShippersGrid"   Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="1" VerticalAlignment="Stretch" AutoGenerateColumns="False" >
+            <Grid:RadDataGrid.Columns>
+                <Grid:DataGridTextColumn Header="Comapny Name" PropertyName="ComapnyName"/>
+                <Grid:DataGridTextColumn Header="Phone" PropertyName="Phone"/>
+            </Grid:RadDataGrid.Columns>
+        </Grid:RadDataGrid>
+
     </Grid>
 </Page>
