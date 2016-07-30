@@ -126,6 +126,7 @@
     <Compile Include="Deserialization\ProductViewModelViewModel.cs" />
     <Compile Include="EmployeeGetPercentInRelationToPositionVM.cs" />
     <Compile Include="EmployeeVM.cs" />
+    <Compile Include="OrderVM.cs" />
     <Compile Include="ProductVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Deserialization\RegionViewModel.cs" />
