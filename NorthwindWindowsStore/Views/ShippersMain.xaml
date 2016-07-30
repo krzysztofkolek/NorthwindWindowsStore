@@ -25,7 +25,7 @@
 			AutomationProperties.AutomationId="BackButton"
 			AutomationProperties.ItemType="Navigation Button" FontFamily="Global User Interface"/>
         <TextBlock x:Name="pageTitle" Text="Shippers" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" Grid.Row="0" 
-			IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Top" Margin="121,58,141,0" HorizontalAlignment="Center" FontSize="50" FontFamily="Times New Roman" FontWeight="Bold" />
+			IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Top" Margin="121,40,141,0" HorizontalAlignment="Center" FontSize="50" FontFamily="Times New Roman" FontWeight="Bold" />
 
 
         <Grid:RadDataGrid Name="ShippersGrid"   Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="1" VerticalAlignment="Stretch" AutoGenerateColumns="False" >
