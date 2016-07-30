@@ -10,14 +10,14 @@
     /// </summary>
     public sealed partial class ShippersMain : Page
     {
-        private List<ShipperVM> _suppliers = NorthwindWindowsStore.Utils.ContentManager.GetContent<ShipperViewModel, ShipperVM>("Shippers/GetAll").Result;
+        private List<ShipperVM> _shippers = NorthwindWindowsStore.Utils.ContentManager.GetContent<ShipperViewModel, ShipperVM>("Shippers/GetAll").Result;
 
         public ShippersMain()
         {
             this.InitializeComponent();
 
             RadDataGrid grid = this.FindName("ShippersGrid") as RadDataGrid;
-            grid.ItemsSource = _suppliers;
+            grid.ItemsSource = _shippers;
         }
     }
 }
