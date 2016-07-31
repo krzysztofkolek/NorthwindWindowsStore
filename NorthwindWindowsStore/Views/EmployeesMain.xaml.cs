@@ -62,7 +62,7 @@ namespace NorthwindWindowsStore.Views
                      Strategy = new PieLabelStrategy()
                  });
 
-
+            this.InvalidateVisualState();
         }
 
         private void Show_All_Click(object sender, RoutedEventArgs e)
@@ -190,7 +190,7 @@ namespace NorthwindWindowsStore.Views
             //{
             //    return this.navigationHelper.CanGoBack();
             //}
-            return true;
+            return this.navigationHelper.CanGoBack();
         }
         private void GoBack()
         {
@@ -204,7 +204,7 @@ namespace NorthwindWindowsStore.Views
             //}
             //else
             //{
-            //    this.navigationHelper.GoBack();
+            this.navigationHelper.GoBack();
             //}
         }
 
