@@ -42,7 +42,7 @@ namespace NorthwindWindowsStore.Utils
                             }
                         }
                     }
-                    serviceVM.AsParallel().ForAll(item =>
+                    foreach (var item in serviceVM)
                     {
                         if (item != null)
                         {
@@ -52,7 +52,7 @@ namespace NorthwindWindowsStore.Utils
                                 output.Add(obj);
                             }
                         }
-                    });
+                    }
                 }
             }
             return output;
