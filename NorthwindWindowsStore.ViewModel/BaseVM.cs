@@ -1,6 +1,7 @@
 ﻿namespace NorthwindWindowsStore.ViewModel
 {
     using System.ComponentModel;
+    using System.Runtime.CompilerServices;
 
     public abstract class BaseVM<T> : INotifyPropertyChanged
         where T : class, new()
@@ -14,7 +15,7 @@
 
         #region INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
-        private void OnPropertyChanged(string propertyName)
+        private void OnPropertyChanged([CallerMemberName]string propertyName)
         {
             if (PropertyChanged != null)
             {
