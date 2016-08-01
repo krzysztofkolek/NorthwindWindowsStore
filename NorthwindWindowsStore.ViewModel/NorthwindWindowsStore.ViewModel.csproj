@@ -105,6 +105,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseVM.cs" />
+    <Compile Include="CustumerVM.cs" />
     <Compile Include="Deserialization\AlphabeticalListOfProductViewModel.cs" />
     <Compile Include="Deserialization\CategorySalesFor1997ViewModel.cs" />
     <Compile Include="Deserialization\CategoryViewModelViewModel.cs" />
