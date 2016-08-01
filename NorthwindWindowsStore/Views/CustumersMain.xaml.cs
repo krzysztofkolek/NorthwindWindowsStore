@@ -1,30 +1,83 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
-
-namespace NorthwindWindowsStore.Views
+﻿namespace NorthwindWindowsStore.Views
 {
+    using NorthwindWindowsStore.Common;
+    using Windows.UI.Xaml;
+    using Windows.UI.Xaml.Controls;
+    using Windows.UI.Xaml.Navigation;
+
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// Custumers Main Page
     /// </summary>
     public sealed partial class CustumersMain : Page
     {
+        private NavigationHelper navigationHelper;
+        public NavigationHelper NavigationHelper
+        {
+            get { return this.navigationHelper; }
+        }
+
+        private const int MinimumWidthForSupportingTwoPanes = 768;
+
         public CustumersMain()
         {
             this.InitializeComponent();
+            this.navigationHelper = new NavigationHelper(this);
+            this.navigationHelper.LoadState += navigationHelper_LoadState;
+            this.navigationHelper.SaveState += navigationHelper_SaveState;
+            this.navigationHelper.GoBackCommand = new NorthwindWindowsStore.Common.RelayCommand(() => this.GoBack(), () => this.CanGoBack());
+
+
+
+            this.InvalidateVisualState();
+        }
+        private bool UsingLogicalPageNavigation()
+        {
+            return Window.Current.Bounds.Width < MinimumWidthForSupportingTwoPanes;
+        }
+
+        private void InvalidateVisualState()
+        {
+            var visualState = DetermineVisualState();
+            VisualStateManager.GoToState(this, visualState, false);
+            this.navigationHelper.GoBackCommand.RaiseCanExecuteChanged();
+        }
+
+        private string DetermineVisualState()
+        {
+            if (!UsingLogicalPageNavigation())
+                return "PrimaryView";
+
+
+            var logicalPageBack = false;
+
+            return logicalPageBack ? "SinglePane_Detail" : "SinglePane";
+        }
+
+        private void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
+        {
+        }
+
+        private void navigationHelper_SaveState(object sender, SaveStateEventArgs e)
+        {
+        }
+
+        private bool CanGoBack()
+        {
+            return this.navigationHelper.CanGoBack();
+        }
+        private void GoBack()
+        {
+            this.navigationHelper.GoBack();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            navigationHelper.OnNavigatedTo(e);
+        }
+
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            navigationHelper.OnNavigatedFrom(e);
         }
     }
 }
