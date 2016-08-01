@@ -15,7 +15,7 @@
 
         #region INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
-        private void OnPropertyChanged([CallerMemberName]string propertyName)
+        protected void OnPropertyChanged([CallerMemberName]string propertyName = null)
         {
             if (PropertyChanged != null)
             {
