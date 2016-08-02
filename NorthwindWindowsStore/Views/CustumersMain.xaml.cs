@@ -2,7 +2,6 @@
 {
     using NorthwindWindowsStore.Common;
     using NorthwindWindowsStore.ViewModel;
-    using System.Collections.Generic;
     using Telerik.UI.Xaml.Controls.Grid;
     using Windows.UI.Xaml;
     using Windows.UI.Xaml.Controls;
@@ -13,7 +12,19 @@
     /// </summary>
     public sealed partial class CustumersMain : Page
     {
-        private List<CustumerVM> _custumers = NorthwindWindowsStore.Utils.ContentManager.GetContent<CustomerViewModel, CustumerVM>("Customer/GetAll").Result;
+        //private List<CustumerVM> _custumers = NorthwindWindowsStore.Utils.ContentManager.GetContent<CustomerViewModel, CustumerVM>("Customer/GetAll").Result;
+        private CustumerVM _custumers { get; set; }
+        public CustumerVM Custumers
+        {
+            get
+            {
+                if (_custumers == null)
+                {
+                    _custumers = new CustumerVM();
+                }
+                return _custumers;
+            }
+        }
 
         private NavigationHelper navigationHelper;
         public NavigationHelper NavigationHelper
@@ -32,7 +43,7 @@
             this.navigationHelper.GoBackCommand = new NorthwindWindowsStore.Common.RelayCommand(() => this.GoBack(), () => this.CanGoBack());
 
             RadDataGrid grid = this.FindName("CustumersGrid") as RadDataGrid;
-            grid.ItemsSource = _custumers;
+            grid.ItemsSource = Custumers.Grid;
 
             this.InvalidateVisualState();
         }

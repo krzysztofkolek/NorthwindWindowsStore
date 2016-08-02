@@ -17,7 +17,19 @@ namespace NorthwindWindowsStore.Views
     /// </summary>
     public sealed partial class EmployeesMain : Page
     {
-        private List<EmployeeGetPercentInRelationToPositionVM> _employeesByPrecent = NorthwindWindowsStore.Utils.ContentManager.GetContent<EmployeeGetPercentInRelationToPositionViewModel, EmployeeGetPercentInRelationToPositionVM>("Employees/GetPercentInRelationToPosition").Result;
+        private EmployeeGetPercentInRelationToPositionVM _employeesByPrecent { get; set; }
+        public EmployeeGetPercentInRelationToPositionVM EmployeesByPrecent
+        {
+            get
+            {
+                if (_employeesByPrecent == null)
+                {
+                    _employeesByPrecent = new EmployeeGetPercentInRelationToPositionVM();
+                }
+                return _employeesByPrecent;
+            }
+        }
+
 
         private NavigationHelper navigationHelper;
         /// <summary>
@@ -45,7 +57,7 @@ namespace NorthwindWindowsStore.Views
 
             List<ChartData> data = new List<ChartData>();
 
-            foreach (var item in _employeesByPrecent)
+            foreach (var item in EmployeesByPrecent.Grid)
             {
                 if (item != null)
                 {

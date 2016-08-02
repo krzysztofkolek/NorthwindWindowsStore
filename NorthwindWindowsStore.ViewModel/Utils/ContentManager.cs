@@ -18,7 +18,7 @@
             List<O> output = new List<O>();
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://localhost:36764/");
+                client.BaseAddress = new Uri("http://localhost/NorthwindWindowsStoreService/");
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 

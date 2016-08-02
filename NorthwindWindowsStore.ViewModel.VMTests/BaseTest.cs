@@ -1,8 +1,9 @@
-﻿namespace NorthwindWindowsStore.ViewModel.Test
+﻿
+namespace NorthwindWindowsStore.ViewModel.VMTests
 {
-    using NUnit.Framework;
+    using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 
-    [TestFixture]
+    [TestClass]
     public class BaseTest<T>
         where T : class, new()
     {
@@ -13,13 +14,13 @@
             TestObject = new T();
         }
 
-        [SetUp]
+        [ClassInitialize]
         public void Setup()
         {
             SetupAction();
         }
 
-        [TearDown]
+        [ClassCleanup]
         public void TearDown()
         {
             TearDownAction();

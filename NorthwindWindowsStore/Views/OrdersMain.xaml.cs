@@ -2,7 +2,6 @@
 {
     using NorthwindWindowsStore.Common;
     using NorthwindWindowsStore.ViewModel;
-    using System.Collections.Generic;
     using System.Linq;
     using Telerik.UI.Xaml.Controls.Grid;
     using Windows.UI.Xaml;
@@ -14,7 +13,19 @@
     /// </summary>
     public sealed partial class OrdersMain : Page
     {
-        private List<OrderVM> _orders = NorthwindWindowsStore.Utils.ContentManager.GetContent<OrderViewModel, OrderVM>("Orders/GetAll").Result;
+        private OrderVM _orders { get; set; }
+        public OrderVM Orders
+        {
+            get
+            {
+                if (_orders == null)
+                {
+                    _orders = new OrderVM();
+                }
+                return _orders;
+            }
+        }
+
         private NavigationHelper navigationHelper;
         public NavigationHelper NavigationHelper
         {
@@ -33,16 +44,16 @@
             CheckData();
 
             RadDataGrid grid = this.FindName("OrdersGrid") as RadDataGrid;
-            grid.ItemsSource = _orders;
+            grid.ItemsSource = Orders.Grid;
 
             this.InvalidateVisualState();
         }
 
         private void CheckData()
         {
-            _orders = (from item in _orders
-                       where item != null
-                       select item).ToList();
+            Orders.Grid = (from item in Orders.Grid
+                           where item != null
+                           select item).ToList();
         }
 
         private bool UsingLogicalPageNavigation()

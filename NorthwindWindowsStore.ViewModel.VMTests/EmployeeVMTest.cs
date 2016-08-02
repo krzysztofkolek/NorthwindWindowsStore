@@ -1,8 +1,8 @@
-﻿namespace NorthwindWindowsStore.ViewModel
+﻿namespace NorthwindWindowsStore.ViewModel.VMTests
 {
-    using NUnit.Framework;
-
-    [TestFixture]
+    using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
+    
+    [TestClass]
     public class EmployeeVMTest
     {
     }

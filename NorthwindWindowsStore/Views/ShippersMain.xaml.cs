@@ -2,7 +2,6 @@
 {
     using NorthwindWindowsStore.Common;
     using NorthwindWindowsStore.ViewModel;
-    using System.Collections.Generic;
     using Telerik.UI.Xaml.Controls.Grid;
     using Windows.UI.Xaml;
     using Windows.UI.Xaml.Controls;
@@ -13,7 +12,19 @@
     /// </summary>
     public sealed partial class ShippersMain : Page
     {
-        private List<ShipperVM> _shippers = NorthwindWindowsStore.Utils.ContentManager.GetContent<ShipperViewModel, ShipperVM>("Shippers/GetAll").Result;
+        private ShipperVM _shippers { get; set; }
+        public ShipperVM Shippers
+        {
+            get
+            {
+                if (_shippers == null)
+                {
+                    _shippers = new ShipperVM();
+                }
+                return _shippers;
+            }
+        }
+
         private NavigationHelper navigationHelper;
         private const int MinimumWidthForSupportingTwoPanes = 768;
         public NavigationHelper NavigationHelper
@@ -30,7 +41,7 @@
             this.navigationHelper.GoBackCommand = new NorthwindWindowsStore.Common.RelayCommand(() => this.GoBack(), () => this.CanGoBack());
 
             RadDataGrid grid = this.FindName("ShippersGrid") as RadDataGrid;
-            grid.ItemsSource = _shippers;
+            grid.ItemsSource = Shippers.Grid;
 
             this.InvalidateVisualState();
         }

@@ -102,7 +102,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="BaseVM.cs" />
+    <Compile Include="CustumerGridVM.cs" />
     <Compile Include="CustumerVM.cs" />
+    <Compile Include="EmployeeDataVM.cs" />
+    <Compile Include="EmployeeGetPercentInRelationToPositionDataVM.cs" />
+    <Compile Include="OrderGridVM.cs" />
     <Compile Include="Deserialization\AlphabeticalListOfProductViewModel.cs" />
     <Compile Include="Deserialization\CategorySalesFor1997ViewModel.cs" />
     <Compile Include="Deserialization\CategoryViewModelViewModel.cs" />
@@ -125,6 +129,7 @@
     <Compile Include="EmployeeGetPercentInRelationToPositionVM.cs" />
     <Compile Include="EmployeeVM.cs" />
     <Compile Include="OrderVM.cs" />
+    <Compile Include="ProductGridVM.cs" />
     <Compile Include="ProductVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Deserialization\RegionViewModel.cs" />
@@ -138,6 +143,7 @@
     <Compile Include="Deserialization\SummaryOfSalesByYearViewModel.cs" />
     <Compile Include="Deserialization\SupplierViewModel.cs" />
     <Compile Include="Deserialization\TerritoryViewModel.cs" />
+    <Compile Include="ShipperGridVM.cs" />
     <Compile Include="ShipperVM.cs" />
     <Compile Include="SupplierGridVM.cs" />
     <Compile Include="SupplierVM.cs" />

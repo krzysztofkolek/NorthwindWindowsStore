@@ -1,10 +1,15 @@
-﻿namespace NorthwindWindowsStore.ViewModel
+﻿namespace NorthwindWindowsStore.ViewModel.VMTests
 {
-    using NUnit.Framework;
+    using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 
-    [TestFixture]
-    public class SupplierVMTest
+    [TestClass]
+    public class SupplierVMTest : BaseTest<SupplierVM>
     {
-        
+        [TestMethod]
+        [Timeout(10 * 60 * 1000)]
+        public void CheckIfGridDataNotNull()
+        {
+            Assert.IsNotNull(TestObject.Grid, "Test checks it the data is different from null.");
+        }
     }
 }

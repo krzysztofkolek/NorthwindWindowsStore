@@ -1,32 +1,27 @@
 ﻿namespace NorthwindWindowsStore.ViewModel
 {
+    using NorthwindWindowsStore.ViewModel.Utils;
+    using System.Collections.Generic;
 
-    public class EmployeeGetPercentInRelationToPositionVM : BaseVM<EmployeeGetPercentInRelationToPositionViewModel>
+    public class EmployeeGetPercentInRelationToPositionVM
     {
+        private List<EmployeeGetPercentInRelationToPositionDataVM> _grid { get; set; }
+        public List<EmployeeGetPercentInRelationToPositionDataVM> Grid
+        {
+            get
+            {
+                return _grid;
+            }
+
+            set
+            {
+                _grid = value;
+            }
+        }
+
         public EmployeeGetPercentInRelationToPositionVM()
         {
-        }
-
-        public EmployeeGetPercentInRelationToPositionVM(EmployeeGetPercentInRelationToPositionViewModel model)
-        {
-            Member.Title = model.Title;
-            Member.Amount = model.Amount;
-        }
-
-        public string Label
-        {
-            get
-            {
-                return Member.Title;
-            }
-        }
-
-        public double Value
-        {
-            get
-            {
-                return Member.Amount;
-            }
+            Grid = ContentManager.GetContent<EmployeeGetPercentInRelationToPositionViewModel, EmployeeGetPercentInRelationToPositionDataVM>("Employees/GetPercentInRelationToPosition").Result;
         }
     }
 }

@@ -18,17 +18,28 @@ namespace NorthwindWindowsStore.Views
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
-        private List<EmployeeVM> _employees = NorthwindWindowsStore.Utils.ContentManager.GetContent<EmployeeViewModel, EmployeeVM>("Employees/GetAll").Result;
-
+        //private List<EmployeeVM> _employees = NorthwindWindowsStore.Utils.ContentManager.GetContent<EmployeeViewModel, EmployeeVM>("Employees/GetAll").Result;
+        private EmployeeVM _employees { get; set; }
+        public EmployeeVM Employees
+        {
+            get
+            {
+                if (_employees == null)
+                {
+                    _employees = new EmployeeVM();
+                }
+                return _employees;
+            }
+        }
 
 
 
         /// <summary>
         /// This can be changed to a strongly typed view model.
         /// </summary>
-        public List<EmployeeVM> DefaultViewModel
+        public List<EmployeeDataVM> DefaultViewModel
         {
-            get { return this._employees; }
+            get { return this.Employees.Grid; }
         }
 
         /// <summary>

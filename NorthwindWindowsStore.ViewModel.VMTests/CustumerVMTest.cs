@@ -1,4 +1,4 @@
-﻿namespace NorthwindWindowsStore.ViewModel
+﻿namespace NorthwindWindowsStore.ViewModel.VMTests
 {
     public class CustumerVMTest
     {

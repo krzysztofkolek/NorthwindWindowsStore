@@ -1,31 +1,28 @@
-﻿namespace NorthwindWindowsStore.ViewModel
+﻿
+namespace NorthwindWindowsStore.ViewModel
 {
-    public class ShipperVM : BaseVM<ShipperViewModel>
+    using NorthwindWindowsStore.ViewModel.Utils;
+    using System.Collections.Generic;
+
+    public class ShipperVM
     {
+        private List<ShipperGridVM> _grid { get; set; }
+        public List<ShipperGridVM> Grid
+        {
+            get
+            {
+                return _grid;
+            }
+
+            set
+            {
+                _grid = value;
+            }
+        }
+
         public ShipperVM()
         {
-        }
-
-        public ShipperVM(ShipperViewModel model)
-        {
-            Member.ShipperID = model.ShipperID;
-            Member.CompanyName = model.CompanyName;
-            Member.Phone = model.Phone;
-        }
-
-        public string CompanyName
-        {
-            get
-            {
-                return Member.CompanyName;
-            }
-        }
-        public string Phone
-        {
-            get
-            {
-                return Member.Phone;
-            }
+            Grid = ContentManager.GetContent<ShipperViewModel, ShipperGridVM>("Shippers/GetAll").Result;
         }
     }
 }

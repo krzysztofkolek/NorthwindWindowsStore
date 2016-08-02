@@ -1,8 +1,8 @@
-﻿namespace NorthwindWindowsStore.ViewModel
+﻿namespace NorthwindWindowsStore.ViewModel.VMTests
 {
-    using NUnit.Framework;
+    using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 
-    [TestFixture]
+    [TestClass]
     public class EmployeeGetPercentInRelationToPositionVMTest
     {
     }
