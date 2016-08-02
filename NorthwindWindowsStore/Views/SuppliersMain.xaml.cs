@@ -2,7 +2,6 @@
 {
     using NorthwindWindowsStore.Common;
     using NorthwindWindowsStore.ViewModel;
-    using System.Collections.Generic;
     using Telerik.UI.Xaml.Controls.Grid;
     using Windows.UI.Xaml;
     using Windows.UI.Xaml.Controls;
@@ -13,7 +12,19 @@
     /// </summary>
     public sealed partial class SuppliersMain : Page
     {
-        private List<SupplierVM> _suppliers = NorthwindWindowsStore.Utils.ContentManager.GetContent<SupplierViewModel, SupplierVM>("Suppliers/GetAll").Result;
+        private SupplierVM _suppliers { get; set; }
+        public SupplierVM Suppliers
+        {
+            get
+            {
+                if (_suppliers == null)
+                {
+                    _suppliers = new SupplierVM();
+                }
+                return _suppliers;
+            }
+        }
+
         private NavigationHelper navigationHelper;
         private const int MinimumWidthForSupportingTwoPanes = 768;
         public NavigationHelper NavigationHelper
@@ -30,7 +41,9 @@
             this.navigationHelper.GoBackCommand = new NorthwindWindowsStore.Common.RelayCommand(() => this.GoBack(), () => this.CanGoBack());
 
             RadDataGrid grid = this.FindName("SuppliersGrid") as RadDataGrid;
-            grid.ItemsSource = _suppliers;
+            grid.ItemsSource = Suppliers.Grid;
+
+
 
             this.InvalidateVisualState();
         }

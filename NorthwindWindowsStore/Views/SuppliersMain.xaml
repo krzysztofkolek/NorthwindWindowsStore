@@ -5,10 +5,11 @@
     xmlns:local="using:NorthwindWindowsStore.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:Grid="using:Telerik.UI.Xaml.Controls.Grid"
+    xmlns:Grid="using:Telerik.UI.Xaml.Controls.Grid" 
     x:Class="NorthwindWindowsStore.Views.SuppliersMain"
     mc:Ignorable="d">
 
+    
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
@@ -33,7 +34,8 @@
 
 
 
-        <Grid:RadDataGrid Name="SuppliersGrid"   Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="1" VerticalAlignment="Stretch" AutoGenerateColumns="False" >
+        <Grid:RadDataGrid Name="SuppliersGrid"   Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="1" VerticalAlignment="Stretch" AutoGenerateColumns="False"
+                          ItemsSource="_data.Grid" DataContext="_data.Grid">
             <Grid:RadDataGrid.Columns>
                 <Grid:DataGridTextColumn Header="Comapny Name" PropertyName="ComapnyName"/>
                 <Grid:DataGridTextColumn Header="Contact" PropertyName="Contact"/>
