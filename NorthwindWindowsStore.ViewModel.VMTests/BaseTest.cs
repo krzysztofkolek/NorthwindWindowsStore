@@ -4,7 +4,7 @@ namespace NorthwindWindowsStore.ViewModel.VMTests
     using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 
     [TestClass]
-    public class BaseTest<T>
+    public abstract class BaseTest<T>
         where T : class, new()
     {
         protected T TestObject { get; set; }

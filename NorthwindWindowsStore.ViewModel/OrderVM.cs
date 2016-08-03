@@ -22,7 +22,7 @@ namespace NorthwindWindowsStore.ViewModel
 
         public OrderVM()
         {
-            Grid = ContentManager.GetContent<OrderViewModel, OrderGridVM>("Order/GetAll").Result;
+            Grid = ContentManager.GetContent<OrderViewModel, OrderGridVM>("Orders/GetAll").Result;
         }
     }
 }

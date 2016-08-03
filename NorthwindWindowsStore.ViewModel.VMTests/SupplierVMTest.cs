@@ -6,10 +6,15 @@
     public class SupplierVMTest : BaseTest<SupplierVM>
     {
         [TestMethod]
-        [Timeout(10 * 60 * 1000)]
-        public void CheckIfGridDataNotNull()
+        public void SupplierVMTestCheckIfGridDataNotNull()
         {
             Assert.IsNotNull(TestObject.Grid, "Test checks it the data is different from null.");
+        }
+
+        [TestMethod]
+        public void SupplierVMTestCheckIfGridDataMoreThenZero()
+        {
+            Assert.IsTrue(TestObject.Grid.Count > 0, "Test checks it the data is more then zero.");
         }
     }
 }
